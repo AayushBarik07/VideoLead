@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VideoLead — Turn Viewers Into Leads</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-dot"></span>
+        VideoLead
+      </a>
+      <ul class="nav-links">
+        <!-- <li><a href="#features">Features</a></li> -->
+        <li><a href="#how-it-works">How It Works</a></li>
+        <!-- <li><a href="#faq">FAQ</a></li> -->
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="theme-icon sun">☀️</span>
+            <span class="theme-icon moon">🌙</span>
+          </button>
+        </li>
+        <li><a href="#video-section" class="nav-cta">Watch Demo</a></li>
+      </ul>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <!-- <a href="#features">Features</a> -->
+      <a href="#how-it-works">How It Works</a>
+      <!-- <a href="#faq">FAQ</a> -->
+      <a href="#video-section" class="nav-cta">Watch Demo</a>
+      <button class="theme-toggle mobile-theme" id="themeToggleMobile" aria-label="Toggle theme">
+        <span class="theme-icon sun">☀️</span>
+        <span class="theme-icon moon">🌙</span>
+        <span class="toggle-label">Toggle Theme</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <!-- <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        New: AI-Powered Lead Capture
+      </div> -->
+      <h1 class="hero-title reveal">
+        Turn Every <span class="highlight">Video View</span><br />Into a Qualified Lead
+      </h1>
+      <p class="hero-subtitle reveal">
+        From Watching to Connecting — Instantly
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#video-section" class="btn-primary">See It In Action</a>
+        <a href="#how-it-works" class="btn-secondary">How It Works →</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num">3.2×</span>
+          <span class="stat-label">More Leads</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">89%</span>
+          <span class="stat-label">Form Completion</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">6s</span>
+          <span class="stat-label">Trigger Time</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="video-section" id="video-section">
+    <div class="section-container">
+      <h2 class="section-title reveal">Watch the Magic Happen</h2>
+      <p class="section-subtitle reveal">
+        Press play. After 6 seconds of real watch time, VideoLead kicks in.<br />
+        Your video. Your leads. Zero drop-off.
+      </p>
+      <div class="video-wrapper reveal">
+        <div class="video-glow"></div>
+        <div class="video-frame-border">
+          <div id="player-container">
+            <div id="player"></div>
+          </div>
+        </div>
+        <div class="video-timer-bar">
+          <div class="timer-track">
+            <div class="timer-fill" id="timerFill"></div>
+          </div>
+          <span class="timer-label" id="timerLabel">Watch time: 0s / 6s</span>
+        </div>
+      </div>
+
+      <!-- CUSTOM VIDEO LOADER -->
+      <div class="custom-video-panel reveal">
+        <div class="cvp-header">
+          <span class="cvp-icon">🎬</span>
+          <div>
+            <h3 class="cvp-title">Try It With Your Own Video</h3>
+            <p class="cvp-subtitle">Paste any YouTube link — the lead-capture flow applies to every video.</p>
+          </div>
+        </div>
+        <div class="cvp-input-row">
+          <div class="cvp-input-wrap">
+            <span class="cvp-input-icon">🔗</span>
+            <input
+              type="url"
+              id="customVideoUrl"
+              class="cvp-input"
+              placeholder="https://www.youtube.com/watch?v=..."
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button class="cvp-clear" id="cvpClearBtn" title="Clear" aria-label="Clear input">✕</button>
+          </div>
+          <button class="cvp-load-btn" id="cvpLoadBtn">Load Video</button>
+        </div>
+        <div class="cvp-feedback" id="cvpFeedback"></div>
+        <div class="cvp-note">
+          ⚠️ Each new video requires a fresh registration — the form will appear again after 6 seconds.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-container">
+      <h2 class="section-title reveal">Simple, Seamless, Effective</h2>
+      <p class="section-subtitle reveal">Four steps. Zero headaches. Real results.</p>
+      <div class="steps-container">
+        <div class="step reveal">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Visitor Hits Play</h3>
+            <p>The viewer presses play on your embedded YouTube video. The watch-time counter begins only when the video is actually playing — not during buffering or pauses.</p>
+          </div>
+        </div>
+        <div class="step-connector reveal"></div>
+        <div class="step reveal">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>6-Second Trigger</h3>
+            <p>Once exactly 6 seconds of genuine watch time is accumulated, the video automatically pauses. The page blurs and a polished modal slides into view.</p>
+          </div>
+        </div>
+        <div class="step-connector reveal"></div>
+        <div class="step reveal">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Lead Captured</h3>
+            <p>The visitor fills in their name, email, and mobile number. All fields are validated. A success screen confirms registration instantly.</p>
+          </div>
+        </div>
+        <div class="step-connector reveal"></div>
+        <div class="step reveal">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>Video Resumes</h3>
+            <p>One click on "Return to Video" closes the modal, removes the blur, and resumes playback from exactly where it was paused. The experience feels natural.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <span class="logo-dot"></span>
+          VideoLead
+        </a>
+      </div>
+      <div class="footer-links">
+        <p>Made by Aayush</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LEAD CAPTURE MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Lead registration">
+    <div class="modal-card" id="modalCard">
+
+      <!-- FORM VIEW -->
+      <div class="modal-view" id="formView">
+        <div class="modal-header">
+          <div class="modal-badge">🔐 Almost There</div>
+          <h2 class="modal-title">Unlock the Full Video</h2>
+          <p class="modal-subtitle">Register once and watch freely, forever. Takes 10 seconds.</p>
+        </div>
+        <form class="lead-form" id="leadForm" novalidate>
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <div class="input-wrapper">
+              <span class="input-icon">👤</span>
+              <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" autocomplete="name" />
+            </div>
+            <span class="field-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <div class="input-wrapper">
+              <span class="input-icon">✉️</span>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" />
+            </div>
+            <span class="field-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <div class="input-wrapper">
+              <span class="input-icon">📱</span>
+              <input type="tel" id="mobile" name="mobile" placeholder="10-digit number" autocomplete="tel" maxlength="10" />
+            </div>
+            <span class="field-error" id="mobileError"></span>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">Register & Continue Watching</button>
+            <button type="button" class="btn-close-form" id="closeFormBtn">Close</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- SUCCESS VIEW -->
+      <div class="modal-view hidden" id="successView">
+        <div class="success-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="26" r="25" fill="none" class="success-circle"/>
+            <path d="M14 27l8 8 16-16" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="success-check"/>
+          </svg>
+        </div>
+        <h2 class="success-title">Registration Successful!</h2>
+        <p class="success-message">
+          Thank you for registering. You can now continue watching the video — uninterrupted, forever.
+        </p>
+        <button class="btn-primary btn-return" id="returnToVideoBtn">▶ Return to Video</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
